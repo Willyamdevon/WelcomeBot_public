@@ -44,9 +44,11 @@ class Welcome(commands.Cog):
             font2 = ImageFont.truetype("./src/fonts/font.ttf", size=20)
 
             draw = ImageDraw.Draw(profile)
+            
+            name = member.name if len(member.name) < 9 else f'{member.name[:9]}...'
 
             draw.text((235, 110), text, font=font2, fill=(255, 255, 255))
-            draw.text((235, 125), member.name, font=font, fill=(255, 255, 255))
+            draw.text((235, 125), name, font=font, fill=(255, 255, 255))
 
             profile.save('./src/imgs/TempProfile.png')
 
