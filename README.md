@@ -11,5 +11,5 @@
 ![image](https://github.com/Willyamdevon/WelcomeBot_public/assets/151402518/367f6899-8414-47de-a248-f8e59d24c09f)
 
 # In this project I used
-## - Pillow for working with images
-## - Disnake for actually writing a bot
+### - Pillow for working with images
+### - Disnake for actually writing a bot
