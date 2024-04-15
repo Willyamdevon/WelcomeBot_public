@@ -15,4 +15,4 @@
 ### - Pillow for working with images
 ### - Disnake for actually writing a bot
 
-### With help[Malix](https://github.com/Malix-Floof)
+### With help [Malix](https://github.com/Malix-Floof)
