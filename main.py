@@ -1,8 +1,10 @@
 import disnake
 from disnake.ext import commands
+import os
+from dotenv import load_dotenv
 
-from config import Config
 
+load_dotenv()
 
 class WelcomeBot(commands.InteractionBot):
     def __init__(self) -> None:
@@ -14,4 +16,4 @@ class WelcomeBot(commands.InteractionBot):
 bot = WelcomeBot()
 bot.load_extensions("modules")
 
-bot.run(Config.TOKEN)
+bot.run(os.getenv('TOKEN'))

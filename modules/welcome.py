@@ -2,9 +2,11 @@ import aiohttp
 import disnake
 from disnake.ext import commands
 from PIL import Image, ImageDraw, ImageOps, ImageFont
+import os
+from dotenv import load_dotenv
 
-from config import Config
 
+load_dotenv()
 
 class Welcome(commands.Cog):
     def __init__(self, bot):
@@ -12,8 +14,8 @@ class Welcome(commands.Cog):
 
     @commands.Cog.listener()
     async def on_member_join(self, member: disnake.Member) -> None:
-        if member.guild.id == Config.GUILD_ID:
-            channel = self.bot.get_channel(Config.CHANNEL_ID)
+        if member.guild.id == os.getenv('GUILD_ID'):
+            channel = self.bot.get_channel(os.getenv('GUILD_ID'))
 
             url = member.display_avatar.url
             async with aiohttp.ClientSession() as session:
