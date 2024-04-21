@@ -14,8 +14,8 @@ class Welcome(commands.Cog):
 
     @commands.Cog.listener()
     async def on_member_join(self, member: disnake.Member) -> None:
-        if member.guild.id == os.getenv('GUILD_ID'):
-            channel = self.bot.get_channel(os.getenv('GUILD_ID'))
+        if member.guild.id == int(os.getenv('GUILD_ID')):
+            channel = self.bot.get_channel(int(os.getenv('GUILD_ID')))
 
             url = member.display_avatar.url
             async with aiohttp.ClientSession() as session:
