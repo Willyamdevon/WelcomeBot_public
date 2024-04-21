@@ -58,8 +58,9 @@ class Welcome(commands.Cog):
 
             profile.close()
             avatar.close()
-
+            
             await channel.send(f"Добро пожаловать на сервер, {member.mention}", file=file)
+            print('Сообщение добавлено')
         else: print("Несоответствие севера и места принятия")
 
 def setup(bot: commands.Bot) -> None:
